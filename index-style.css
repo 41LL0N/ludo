@@ -1,0 +1,103 @@
+body {
+  background-color: white;
+}
+.intro {
+  background-color: #3003fc;
+  padding-bottom: 350px;
+  margin: 0px;
+}
+.navbar {
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  padding-top: 20px;
+}
+.navbar img {
+  width: 160px;
+}
+@font-face {
+  font-family: 'Google Sans Regular';
+  src: url(ProductSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Google Sans Medium';
+  src: url(ProductSans-Medium.ttf);
+}
+#cf {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+.button {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 1px 2px 3px black;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: Google Sans Medium;
+  text-decoration: none;
+  color: black;
+  margin-bottom: -120px;
+}
+.button:hover {
+  background-color: black;
+  border-radius: 12px;
+  box-shadow: 1px 2px 3px black;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: Google Sans Medium;
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.4s;
+}
+h1 {
+  font-family: Google Sans Medium;
+}
+.about-our-services {
+
+}
+p {
+  font-family: Google Sans Regular;
+}
+.personal {
+  box-shadow: 1px 2px 3px black;
+  padding: 10px;
+  text-align: center;
+  margin-right: 900px;
+  padding-bottom: 100px;
+  margin-left: 100px;
+}
+.education {
+  box-shadow: 1px 2px 3px black;
+  padding: 10px;
+  text-align: center;
+  margin-right: 550px;
+  padding-bottom: 100px;
+  margin-left: 450px;
+  margin-top: -300px;
+}
+.enterprise {
+  box-shadow: 1px 2px 3px black;
+  padding: 10px;
+  text-align: center;
+  margin-right: 200px;
+  padding-bottom: 100px;
+  margin-left: 800px;
+  margin-top: -335px;
+}
