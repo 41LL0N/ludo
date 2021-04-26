@@ -14,7 +14,7 @@ router.get('/', async(req, res) => {
 
 router.get('/home', (req, res) => {
     let data = {
-        user: req.session.user,
+        user: req.user,
     }
     res.render("home", data);
 })
