@@ -9,6 +9,6 @@ await mongoose.connect("mongodb+srv://admin:eschooladmin@cluster0.poe1m.mongodb.
         useFindAndModify: false,
 })
 
-    await new App().listen(8080);
+    await new App().listen(process.env.PORT || 8080);
     console.log("Connected to the server. Website is operational!")
 })();
