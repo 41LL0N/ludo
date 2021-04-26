@@ -15,14 +15,6 @@ class App {
     / * Middleware Functions */ 
     this.express.use(cookieParser());
     this.express.use(express.static(__dirname + "public"));
-    this.express.use(
-      session({
-        secret:
-          "F577259F38FD820133AE0BE1FB5ED76ABFC26BAC899805AF7A4FA99D4B9580DF",
-        resave: false,
-        saveUninitialized: false,
-      })
-    );
     this.express.use(express.static("public"))
   this.express.set("view engine", "ejs");
   this.express.set("views", "./templates")
