@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const User = require("../public/models/User");
 
 // ROUTING
 const userCollectionPages = require("./user/index");
@@ -7,12 +8,15 @@ const apiPage = require('./api/index');
 //router.use("/User", userCollectionPages);
 router.use('/api/v1', apiPage);
 
-router.get('/', (req, res) => {
+router.get('/', async(req, res) => {
     res.render('index');
 })
 
 router.get('/home', (req, res) => {
-    res.render("home");
+    let data = {
+        user: req.session.user,
+    }
+    res.render("home", data);
 })
 
 router.get('/admin/new-user', (req, res) => {

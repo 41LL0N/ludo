@@ -1,8 +1,9 @@
 const route = require("express").Router();
 const User = require('../../../public/models/User');
 const bcrypt = require("bcrypt");
+const crypto = require("crypto");
 
-route.get('/user-action/login', async(req, res) => {
+route.post('/user-action/login', async(req, res) => {
     var lookedUpIndex = await User.findOne({ username: req.body.username });
         if(lookedUpIndex){
             let hashRes = false;
@@ -13,24 +14,22 @@ route.get('/user-action/login', async(req, res) => {
                 console.log(`${lookedUpIndex.username} just logged in!`)
                     res.redirect("/home");
                 } else {
-                return res.redirect('/login?error=wrongPass');
+                return res.redirect('/home');
                 }
             });
     
         } else {
-            return res.redirect('/login?error=wrongUsername');
+            return res.redirect('/home');
         }
 });
 
-route.get('/admin-action/new-user/create', async(req, res) => {
+route.post('/admin-action/new-user/create', async(req, res) => {
     var username = req.body.username;
     var password = req.body.password;
     
     var checkHash;
     var passHash;
-    var saltRounds = 20;
-
-    if(req.body.adminPass === "00DV2123781$$") {
+    var saltRounds = 10;
         bcrypt.hash(username, 0).then(async function (hashUsername) {
             console.log(hashUsername);
     
@@ -50,9 +49,6 @@ route.get('/admin-action/new-user/create', async(req, res) => {
     
             });
         });
-    } else {
-        res.sendStatus(404);
-    }
 })
 
 module.exports = route;

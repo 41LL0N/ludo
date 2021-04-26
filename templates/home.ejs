@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>eSchool | Home</title>
+    <link rel="stylesheet" href="/public/css/home.css" />
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <%- include("components/navigation") %>
+    <div class="wrapper">
+        <div class="wrapper-left">
+            <%- include("components/timetable") %>
+        </div>
+        <div class="wrapper-left" style="margin-left: 20px;">
+            <div class="card" style="height: 100px;">
+                <img src="/public/images/1618124444507.jpg.png" alt="MSC" style="float: left;vertical-align: -webkit-baseline-middle;vertical-align: middle;padding:10px;" width="40px">
+                <span style="vertical-align: middle;vertical-align: -webkit-baseline-middle; margin-left: 20px;float:left;margin-top: 20px;">
+                    <span style="font-size: medium;color:rgb(114, 114, 114);font-weight: bold;">Welcome back, Dillon!</span><br>
+                    <span style="font-size: larger;font-weight:bold;">Mildura Senior College</span>
+                </span>
+            </div>
+            <br>
+            <div class="card">
+                <br>
+                <a class="app-icon webmail" style="margin-left: 20px;" href="https://webmail.milsen.vic.edu.au" target="popup" 
+                onclick="window.open('https://webmail.milsen.vic.edu.au','popup','width=1080,height=720'); return false;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Outlook_hi-res_icon_%282019%29.svg" width="70px">
+                </a>
+                <a class="app-icon classroom" href="https://classroom.google.com/a/milsen.vic.edu.au/" target="popup" onclick="window.open('https://classroom.google.com/a/milsen.vic.edu.au/', 'popup', 'width=1080,height=720'); return false;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Google_Classroom_icon.svg" width="70px">
+                </a>
+                <a class="app-icon compass" href="https://milsen-vic.compass.education/" target="popup" onclick="window.open('https://milsen-vic.compass.education/', 'popup', 'width=1080,height=720'); return false;">
+                    <img src="https://assets.website-files.com/5d48b7ac15f2c10c0ffae816/5d64ea576ed3ee71a1a0cd71_cropped-Site-Favicon-256.png" width="60px">
+                </a>
+                <a class="app-icon notion" href="https://notion.so/" target="popup" onclick="window.open('https://notion.so', 'popup', 'width=1080,height=720'); return false;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" width="60px">
+                </a>
+                <a class="app-icon ivet" href="https://portal.ivetinstitute.com.au" target="popup" onclick="window.open('https://portal.ivetinstitute.com.au', 'popup', 'width=1080,height=720'); return false;">
+                    <img src="https://d25sesec4kl7l2.cloudfront.net/assets/logo-big-a2cdee9460ebed87a1afb8989955783d4f6e369e641c2e3e71002d7605943921.png" width="60px">
+                </a>
+                <br><br>
+            </div>
+            <br>
+            <div class="card">
+                <h2>My Assignments</h2>
+                <small style="color: lightgray;">You have no assignments to complete.</small>
+                <br><br>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
