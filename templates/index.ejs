@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSchool: Login</title>
+    <link rel="stylesheet" href="/public/css/login-uls.css"/>
+</head>
+<body>
+    <h1></h1>
+    <container>
+        <center>
+            <div class="login-wrapper">
+                <div class="login-uls-card">
+                    <div class="user_information_uls">
+                        <h2>ESCHOOL</h2>
+                    <h3>Login using your eSchool account</h3>
+                    </div>
+                    <div class="user_input_form_uls">
+                        <form action="/api/v1/req/user-action/login/">
+                            <input name="username" placeholder="Username" required>
+                            <br>
+                            <input name="password" placeholder="Password" required>
+                            <br>
+                            <button type="submit" class="btn_submit_uls">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </container>
+</body>
+</html>

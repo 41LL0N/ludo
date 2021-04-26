@@ -1,2 +1,0 @@
-# ludo
- LUDO Personal repository.
