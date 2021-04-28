@@ -10,7 +10,7 @@ route.post('/user-action/login', async(req, res) => {
 
             await bcrypt.compare(req.body.password, lookedUpIndex.password, function(err, result) {
                 if(result === true) {
-                    req.user = lookedUpIndex;
+                    req.session.user = lookedUpIndex;
                 console.log(`${lookedUpIndex.username} just logged in!`)
                     res.redirect("/home");
                 } else {

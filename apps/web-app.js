@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const passport = require("passport");
 const bodyParser = require('body-parser');
+const MemoryStore = require("memorystore")(session);
 
 const getFilesSync = require("../utils/fileWalk");
 
@@ -13,6 +14,15 @@ class App {
     this.express.locals = locals;
 
     / * Middleware Functions */ 
+    this.express.use(session({
+      cookie: { maxAge: 86400000 },
+      store: new MemoryStore({
+        checkPeriod: 86400000 // prune expired entries every 24h
+      }),
+      resave: false,
+      secret: 'keyboard cat'
+  }))
+
     this.express.use(cookieParser());
     this.express.use(express.static(__dirname + "public"));
     this.express.use(express.static("public"))

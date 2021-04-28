@@ -14,13 +14,20 @@ router.get('/', async(req, res) => {
 
 router.get('/home', (req, res) => {
     let data = {
-        user: req.user,
+        user: req.session.user,
     }
     res.render("home", data);
 })
 
 router.get('/admin/new-user', (req, res) => {
     res.render("new-user");
+})
+
+router.get('/classes', (req, res) => {
+    let data = {
+        user: req.session.user,
+    }
+    res.render('classes', data);
 })
 
 module.exports = router;
