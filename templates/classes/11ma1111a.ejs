@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSchool | 11MA1111A</title>
+    <link rel="stylesheet" href="/public/css/class.css">
+</head>
+<body>
+    <%- include("../components/navigation") %>
+    <div class="class-banner maths"></div> <!-- Background controlled in CSS -->
+    <div class="wrapper">
+        <div class="class-title-header">
+            <h2 style="margin-bottom: 0px;">Mathematics - Methods</h2>
+            <small>11MA1111A (2021 Academic)</small>
+            <div style="float: right;">
+                <button id="markRollBtn" class="button">Mark Roll</button>
+                <button id="myBtn" class="button">Mark Roll</button>
+            </div>
+            <br><br>
+        </div>
+        <br>
+        <div style="float:left;width:45%;">
+            <div class="card-left">
+                <img src="/public/images/teachers/6a39f1e9-a231-42bf-a788-b09338a8bc36_0502211227AM.jpeg" alt="WLN" width="50px" class="teacher-icon">
+                <h3>William Lennie</h3>
+            </div>
+            <br>
+            <div class="card-left">
+                <small style="color: gray;font-weight: bolder;">SUGGESTED APPS</small><br><br>
+                <a class="app-icon webmail" style="margin-left: 20px;" href="https://webmail.milsen.vic.edu.au" target="popup" 
+                    onclick="window.open('https://webmail.milsen.vic.edu.au','popup','width=1080,height=720'); return false;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Outlook_hi-res_icon_%282019%29.svg" width="70px">
+                    </a>
+                    <a class="app-icon classroom" href="https://classroom.google.com/a/milsen.vic.edu.au/" target="popup" onclick="window.open('https://classroom.google.com/a/milsen.vic.edu.au/', 'popup', 'width=1080,height=720'); return false;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Google_Classroom_icon.svg" width="70px">
+                    </a>
+            </div>
+        </div>
+        <div style="float: right;width:45%;">
+            <div class="card-left">
+                <small style="color: gray;font-weight:bolder;">ASSIGNMENTS</small><br><br>
+                <p>You have no assignments due. Need to add one? Do it below.</p>
+                <button class="button">Add Assignment</button>
+            </div>
+            <br>
+            <div class="card-left">
+                <small style="color:gray;font-weight: bolder;">LESSONS ATTENDED</small><br><br>
+                <p>You have attended <b>0</b> lessons this year. Make sure to add your lessons using the Attendance screen, or using the button below.</p>
+                <button class="button">Add Lesson</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- The Modal -->
+<div id="mr-modal" class="modal maths">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="mr-close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<!-- Scripting -->
+<script>
+    // Get the modal
+var markrollmodal = document.getElementById("mr-modal");
+var markrollbtn = document.getElementById("markRollBtn");
+var mrspan = document.getElementsByClassName("mr-close")[0];
+
+markrollbtn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</html>

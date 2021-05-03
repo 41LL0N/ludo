@@ -9,15 +9,15 @@
 </head>
 <body>
     <%- include('components/navigation') %>
-    <div class="main-wrapper">
+    <div class="main-wrapper" style="margin-top: 100px;background-color: white;">
         <h2 style="color: rgb(66, 66, 66); font-weight: bolder;">Classes</h2>
         <div class="classes-table">
             <br><br>
             <div class="class-card maths">
-                <div style="float: left;padding:10px;">
+                <div style="float: left;padding:10px;color:white;">
                     <h3 style="margin-bottom: -2px;">Mathematics - Methods</h3>
                 <small class="class-code">11MA1111A (2021 Academic)</small><br><br><br>
-                <a class="button" href="#">View Class</a>
+                <a class="button" href="/classes/math-methods-11ma1111a">View Class</a>
                 <a class="button" href="#">Edit Info</a>
                 </div>
                 <div class="info-class-card" style="float:right;">
@@ -32,7 +32,7 @@
             </div>
             <br>
             <div class="class-card english">
-                <div style="float: left;padding:10px;">
+                <div style="float: left;padding:10px;color:white;">
                     <h3 style="margin-bottom: -2px;">English</h3>
                 <small class="class-code">11MA1111A (2021 Academic)</small><br><br><br>
                 <a class="button" href="#">View Class</a>
@@ -50,7 +50,7 @@
             </div>
             <br>
             <div class="class-card computing">
-                <div style="float: left;padding:10px;">
+                <div style="float: left;padding:10px;color:white;">
                     <h3 style="margin-bottom: -2px;">Applied Computing</h3>
                 <small class="class-code">11MA1111A (2021 Academic)</small><br><br><br>
                 <a class="button" href="#">View Class</a>
@@ -67,8 +67,8 @@
                 <br><br>
             </div>
             <br>
-            <div class="class-card other">
-                <div style="float: left;padding:10px;">
+            <div class="class-card pathways">
+                <div style="float: left;padding:10px;color:white;">
                     <h3 style="margin-bottom: -2px;">Yr11 Pathways</h3>
                 <small class="class-code">11MA1111A (2021 Academic)</small><br><br><br>
                 <a class="button" href="#">View Class</a>
@@ -88,7 +88,7 @@
             <div class="class-card other">
                 <div style="float: left;padding:10px;">
                     <h3 style="margin-bottom: -2px;">VET Business</h3>
-                <small class="class-code">11MA1111A (2021 Academic)</small><br><br><br>
+                <small class="class-code">11ZBU114A (2021 Academic)</small><br><br><br>
                 <a class="button" href="#">View Class</a>
                 <a class="button" href="#">Edit Info</a>
                 </div>
@@ -123,5 +123,6 @@
             <br>
         </div>
     </div>
+    <%- include("components/footer") %>
 </body>
 </html>

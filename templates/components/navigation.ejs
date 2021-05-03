@@ -6,13 +6,21 @@
     }
 
     .navigation_uls_wrapper {
-        top: 0;
-        background-color: white;
-        box-shadow: 0px 4px 10px -4px rgba(0, 0, 0, 0.25);
         padding: 5px;
         height: 50px;
         z-index: 999;
+        background-color: rgba(0, 0, 0, 0.555);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        top: 0;
+        position: fixed;
+        width: 100%;
     }
+
+    .navigation_uls_wrapper i {
+        color: white;
+    }
+
     .navigation_uls_container {
         display: inline-flexbox;
         height: max-content;
@@ -47,11 +55,14 @@
     .uls_navigation li {
         display: inline-block;
         padding: 10px;
+        transition-duration: 400ms;
+        border-radius: 8px;
     }
     .uls_navigation_right li:hover,
     .uls_navigation li:hover {
-        background-color: rgb(218, 218, 218);
-        border-radius: 8px;
+        box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.507);
+        transition-duration: 400ms;
+        transform: translateY(-3px);
     }
     .uls_navigation_right li a,
     .uls_navigation li a {
@@ -63,7 +74,7 @@
 </style>
 <!-- Navigation -->
 <script src="https://kit.fontawesome.com/d16b5914e6.js" crossorigin="anonymous"></script>
-<div class="navigation_uls_wrapper">
+<div class="navigation_uls_wrapper" id="navbar">
     <div class="navigation_uls_container">
         <h2 class="side_uls_logo">ESCHOOL</h2>
         <ul class="uls_navigation">

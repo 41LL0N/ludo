@@ -30,4 +30,55 @@ router.get('/classes', (req, res) => {
     res.render('classes', data);
 })
 
+router.get('/classes/:className', (req, res) => {
+    let cName = req.params.className;
+
+    if(cName === "math-methods-11ma1111a") {
+        let data = {
+            user: req.session.user,
+        };
+
+        res.render("classes/11ma1111a", data);
+    }
+
+    if(cName === "english-11en0115o") {
+        let data = {
+            user: req.session.user,
+        };
+
+        res.render("classes/11en0115o", data);
+    }
+
+    if(cName === "applied-computing-11it0112a") {
+        let data = {
+            user: req.session.user,
+        };
+
+        res.render("classes/11it0112a", data);
+    }
+
+    if(cName === "pathways-11path123") {
+        let data = {
+            user: req.session.user,
+        };
+
+        res.render("classes/11path123", data);
+    }
+
+    if(cName === "vet-business-11zbu11114a") {
+        let data = {
+            user: req.session.user,
+        };
+
+        res.render("classes/11zbu114a", data);
+    }
+
+    if(cName === "accounting-11ac0113a") {
+        let data = {
+            user: req.session.user,
+        }; 
+        res.render("classes/11ac0113a", data);
+    }
+})
+
 module.exports = router;
