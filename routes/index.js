@@ -28,6 +28,13 @@ router.get('/classes', (req, res) => {
         user: req.session.user,
     }
     res.render('classes', data);
+});
+
+router.get('/schedule', (req, res) => {
+    let data = {
+        user: req.session.user,
+    }
+    res.render("schedule", data);
 })
 
 router.get('/classes/:className', (req, res) => {

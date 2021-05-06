@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSchool | Schedule</title>
+    <link rel="stylesheet" href="/public/css/home.css">
+</head>
+<body>
+    <div class="bkg-img" style="filter:blur(20px);"></div>
+    <div class="content">
+        <%- include("components/navigation") %>
+        <div style="z-index: 999;margin-top: 60px;">
+            <link href='/public/css/tt-main.css' rel='stylesheet' /><link href='https://www.planyo.com/libs/fullcalendar-scheduler/scheduler.min.css' rel='stylesheet' /><div id='cpcal_planyonet' class='cp_calendar cp_units_30 ' ></div><a title='Calendar powered by Planyo' alt='Calendar powered by Planyo' href='http://www.planyo.net' target='_blank' class='cp_pb'>calendar </a><div id='cp_fetch_cpcal_planyonet' class='cp_fetching' style='position:absolute;left:200px;top:10px;display:none;z-index:999;'><img src='https://www.planyo.com/images/hourglass.gif' /></div><script>
+                if(!document.cp_instances) document.cp_instances = new Array(); document.cp_instances.push({'all_views':'custAgendaWeek', 'def_view':'custAgendaWeek', 'time_unit':60, 'resources':[{"id":"Resource_1","title":"Resource 1","granulation":"60","click_url":null}], 'resource_id': "Resource_1", 'jsonp_url':{url:"https://www.planyo.net/fetch-calendar.php?eh=2d5eec9b5ce2dc35d8dd2d7b111c141671e3f540&ih=af7e540789aa5fdbc9d2e1033a7ee53322b9f410&callback=?", cache: false}, 'timezone':'browser', 'tz_offset': 10, 'min_hour':'0:00:00', 'max_hour':'24:00:00', 'open_frame':"_top", 'element_id':'cpcal_planyonet', 'fetching_id':'cp_fetch_cpcal_planyonet', 'lng': 'en'}); document.cp_time_format='HH:mm'; document.cp_title_format='dddd, MMMM Do, YYYY'; document.cp_title_format_short='ddd, MMM Do'; document.cp_s_day="day"; document.cp_s_days="days"; document.cp_s_vert_day="vertical day"; document.cp_s_month="month"; document.cp_s_week="week"; document.cp_s_weeks="weeks"; document.cp_s_agenda="agenda";
+              
+              var scr0 = document.createElement('script'); scr0.onload = function () { var scr1 = document.createElement('script'); scr1.onload = function () {var scr2 = document.createElement('script'); scr2.onload = function() {var scr3 = document.createElement('script'); scr3.src = "https://www.planyo.com/embed-schedule.js"; document.head.appendChild(scr3);}; scr2.src = "https://www.planyo.com/libs/fullcalendar/locale/en.js"; document.head.appendChild(scr2);}; scr1.src = "https://www.planyo.com/libs/planyonet-fc.js"; document.head.appendChild(scr1); }; scr0.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"; document.head.appendChild(scr0);
+              </script>
+              <link rel='stylesheet' href='/public/css/timetable.css' type='text/css' />
+        </div>
+    </div>
+</body>
+</html>

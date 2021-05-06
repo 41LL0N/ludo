@@ -38,10 +38,9 @@
     .navigation_uls_container .uls_navigation_right {
         float: right;
         vertical-align: -webkit-baseline-middle;
-        vertical-align: middle;
         list-style-type: none;
         font-weight: bold;
-        margin-top: 5px;
+        margin-top: 1px;
     }
     .navigation_uls_container .uls_navigation {
         float: left;
@@ -71,6 +70,14 @@
     .uls_navigation_right {
         float: right;
     }
+
+    .profile_name {
+        float: right;
+        margin-top: 4px;
+        margin-left: 3px;
+        margin-bottom: -5px;
+        color: white;
+    }
 </style>
 <!-- Navigation -->
 <script src="https://kit.fontawesome.com/d16b5914e6.js" crossorigin="anonymous"></script>
@@ -85,7 +92,7 @@
                 <a href="/classes"><i class="fa fa-pencil"></i></a>
             </li>
             <li class="navigation_item">
-                <a href="/timetable"><i class="fa fa-calendar"></i></a>
+                <a href="/schedule"><i class="fa fa-calendar"></i></a>
             </li>
         </ul>
         <ul class="uls_navigation_right">
@@ -93,6 +100,7 @@
                 <% if(user) { %>
                     <a href="/account">
                         <img src="<%= user.avatar %>" alt="<%= user.username %>" width="30px" style="border-radius: 360px;">
+                        <h4 class="profile_name"><%= user.firstName %></h4>
                     </a>
                <% } else { %>
                     <a href="/account"><i class="fa fa-user-circle"></i></a>

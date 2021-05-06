@@ -48,12 +48,6 @@
     animation-name: animatetop;
     animation-duration: 600ms;
   }
-  
-  /* Add Animation */
-  @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-  }
 
   .button {
       padding: 10px 20px;
@@ -141,4 +135,10 @@
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
