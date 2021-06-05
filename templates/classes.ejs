@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="/public/css/home.css" />
 </head>
 <body>
-    <%- include('components/navigation') %>
-    <div class="main-wrapper" style="margin-top: 100px;background-color: white;">
-        <h2 style="color: rgb(66, 66, 66); font-weight: bolder;">Classes</h2>
-        <div class="classes-table">
+  <%- include('components/navigation') %>
+  <div class="content">
+    <div class="main-wrapper" style="margin-top: 100px; background-color: white;">
+        <h2 style="color: black; font-weight: bolder;">Classes</h2>
+        <div class="classes-table" style="background-color: black;">
             <br><br>
             <div class="class-card maths">
                 <div style="float: left;padding:10px;color:white;">
@@ -124,5 +125,17 @@
         </div>
     </div>
     <%- include("components/footer") %>
+  </div>
 </body>
+
+<script>
+    window.addEventListener('scroll',(e)=>{
+      const nav = document.getElementById("navbar");
+      if(window.pageYOffset>0){
+        nav.classList.add("add-shadow");
+      }else{
+        nav.classList.remove("add-shadow");
+      }
+    });
+  </script>
 </html>

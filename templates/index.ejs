@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="/public/css/login-uls.css"/>
 </head>
 <body>
-    <h1></h1>
     <container>
-        <center>
             <div class="login-wrapper">
                 <div class="login-uls-card">
                     <div class="user_information_uls">
@@ -21,14 +19,13 @@
                         <form action="/api/v1/req/user-action/login/" method="POST">
                             <input name="username" placeholder="Username" required>
                             <br>
-                            <input name="password" placeholder="Password" required>
+                            <input name="password" placeholder="Password" required type="password">
                             <br>
                             <button type="submit" class="btn_submit_uls">Login</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </center>
     </container>
 </body>
 </html>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+
+		<title>C# Cheat Sheet v3.7</title>
+
+		<link rel="stylesheet" href="file://msc/Files/Student%20Home/HEA0054/Downloads/css/styles.css?v=1.0">
+
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style>
+			body {
+				margin: 0;
+			}
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				width: 25%;
+				background-color: #f1f1f1;
+				position: fixed;
+				height: 100%;
+				overflow: auto;
+				border: 1px solid #555;
+			}
+
+			li a {
+				display: block;
+				color: #000;
+				padding: 8px 16px;
+				text-decoration: none;
+				border-bottom: 1px solid #555;
+			}
+			
+			li:last-child {
+				border-bottom: none;
+			}
+
+			li a.active {
+				background-color: #4CAF50;
+				color: white;
+			}
+
+			li a:hover:not(.active) {
+				background-color: #555;
+				color: white;
+			}
+			
+			h2 {
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="file://msc/Files/Student%20Home/HEA0054/Downloads/js/scripts.js"></script>
+		
+		<!-- Navigation -->
+		<ul>
+			<li><a class="active" href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#home">Home</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#variablescope">Variable Scope</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#combinestrings">Combine strings and output to console</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#getstring">Get a string from the user</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#getint">Get an integer from the user</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#getdouble">Get a double from the user</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#compstrings">Compare strings (if statements)</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#compnums">Compare numbers (if statements)</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#maths">Maths with Numbers</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#simplefunction">Simple functions</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#forloop">For loop (counted loop)</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#whileloop">While loop (uncounted loop)</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#array">Declare/Initialise an Array</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#arrayvalues">Assigning Values to Array Elements</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#arrayaccess">Accessing Array Elements</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#menuexample">An example console menu</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#consolechecknum">Simple number validation</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#trycatchblock">Try/Catch Block</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#datetostring">Date To String (Timestamps)</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#filesetuppath">FILES: Setup filename</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#filedelete">FILES: Delete</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#filewrite">FILES: Write</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#fileread">FILES: Read</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#fileappend">FILES: Append</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#roundingdoubles">Maths: Rounding</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#randomnumbers">Maths: Random Numbers</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#guigetstring">GUI: Get a string from a textbox</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#guigetint">GUI: Get an integer from a textbox</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#guioutputstring">GUI: Output a string to a label</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#guiradiobuttons">GUI: Radio Buttons</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#guigetintvalid">GUI: Get and validate a number</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#guigetstrvalid">GUI: Get and validate a string</a></li>
+			<li><a href="file://msc/Files/Student%20Home/HEA0054/Downloads/CheatSheet%20(1).html#intdoctemplates">Internal Documentation Templates</a></li>
+		</ul>
+		<a id="home"></a>
+		<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+			<h2>C# Cheat Sheet</h2>
+			<h3>Version: 3.7 --- Last Edited: 02-02-2021</h3>
+			<p>Forgotten how to do something? Look it up in here!</p>
+			<br>
+			
+			
+			<a id="variablescope"><h3>Variable Scope</h3></a>
+			<p>Variables live within pairs of curly brackets like these {}</p>
+			<p>Outside of those brackets, they cannot be accessed, so you can reuse variable names</p>
+			<pre><code>
+			private void example()
+			{
+				int intNumA = 0;
+				
+				// We can access and read/modify intNumA here
+				
+				for (int i = 0; i &lt; 10; i++)
+				{
+					// We can access intNumA here, because we are still within the original {}'s
+					intNumA = intNumA + 2;
+					i = intNumA * i;
+				}
+			}
+			
+			private void anotherMethod()
+			{
+				// We cannot see intNumA in here, because it is not within that block of {}'s
+			}
+			</code></pre>
+			<br>
+			
+			
+			<a id="combinestrings"><h3>Combine strings and output to console</h3></a>
+			<pre><code>
+			string strOne = "My name is: ";
+			string strTwo = "Bob";
+			Console.WriteLine(strOne + strTwo);
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			My name is: Bob
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="getstring"><h3>Get a string from the user</h3></a>
+			<pre><code>
+			Console.Write("What is your name? ");
+			string strName = Console.ReadLine();
+			
+			Console.WriteLine("Your name is " + strName);
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			What is your name? <i>Bob</i>
+			Your name is Bob
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="getint"><h3>Get an integer from the user</h3></a>
+			<pre><code>
+			Console.Write("Enter number one: ");
+			int <b>intSumA</b> = -999; // error value
+			while (!int.TryParse(Console.ReadLine(), out <b>intSumA</b>))
+			{
+				Console.Write("The value must be an integer, try again: ");
+			}
+			</code></pre>
+			<p>Copy and paste but change what I have highlighted in bold.</p>
+			<br>
+			
+			
+			<a id="getdouble"><h3>Get a double from the user</h3></a>
+			<pre><code>
+			Console.Write("Enter number one: ");
+			double <b>dblNumA</b> = -999; // error value
+			while (!double.TryParse(Console.ReadLine(), out <b>dblNumA</b>))
+			{
+				Console.Write("The value must be an integer, try again: ");
+			}
+			</code></pre>
+			<p>Copy and paste but change what I have highlighted in bold.</p>
+			<br>
+			
+			
+			<a id="compstrings"><h3>Compare strings (if statements)</h3></a>
+			<pre><code>
+			string strName = "Bob";
+			
+			if (strName.Equals("Awesome"))
+			{
+				Console.WriteLine("You are awesome!!");
+			}
+			else
+			{
+				Console.WriteLine("Sorry...");
+			}
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			Sorry...
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="compnums"><h3>Compare numbers (if statements)</h3></a>
+			<pre><code>
+			int intNumA = 10;
+			int intNumB = 11;
+			
+			if (intNumA == intNumB)
+			{
+				Console.WriteLine("The numbers are the same");
+			}
+			else if (intNumA &lt; intNumB)
+			{
+				Console.WriteLine(intNumA + " is less than " + intNumB);
+			}
+			else if (intNumA &gt; intNumB)
+			{
+				Console.WriteLine(intNumA + " is more than " + intNumB);
+			}
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			10 is less than 11
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="maths"><h3>Maths with numbers</h3></a>
+			<pre><code>
+			int intNumA = 3;
+			int intNumB = 4;
+			
+			int intPlusResult = intNumA + intNumB;
+			Console.WriteLine("Result: " + intPlusResult);
+			
+			
+			int intMinusResult = intNumA - intNumB;
+			Console.WriteLine("Result: " + intMinusResult);
+			
+			
+			int intMultiplyResult = intNumA * intNumB;
+			Console.WriteLine("Result: " + intMultiplyResult);
+			
+			// C# is a strongly typed language, convert your integers to doubles before dividing
+			// Otherwise you wont get the result you are expecting!
+			
+			double dblDivideResult = (double)intNumA / (double)intNumB;
+			Console.WriteLine("Result: " + dblDivideResult);
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			Result: 7
+			Result: -1
+			Result: 12
+			Result: 0.75
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="simplefunction"><h3>Simple functions</h3></a>
+			<pre><code>
+			static void Main(string[] args)
+			{
+				int intSumA = 10;
+				int intSumB = 20;
+				int intTotal = CalcTwoNum(intSumA, intSumB);
+
+				Console.WriteLine("Total: " + intTotal);
+			}
+
+			private static int CalcTwoNum(int intSumA, int intSumB)
+			{
+				int intRetVal = intSumA + intSumB;
+				return intRetVal;
+			}
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			Total: 30
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="forloop"><h3>For loop (counted loop)</h3></a>
+			<pre><code>
+			for (int i = 0; i &lt; 10; i++)
+			{
+				int intTemp = i * 2;
+				Console.WriteLine("i = " + i + " and intTemp = " + intTemp);
+			}
+			</code></pre>
+			<pre><code><b>
+			Output:
+			i = 0 and intTemp = 0
+			i = 1 and intTemp = 2
+			i = 2 and intTemp = 4
+			i = 3 and intTemp = 6
+			i = 4 and intTemp = 8
+			i = 5 and intTemp = 10
+			i = 6 and intTemp = 12
+			i = 7 and intTemp = 14
+			i = 8 and intTemp = 16
+			i = 9 and intTemp = 18
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="whileloop"><h3>While loop (uncounted loop)</h3></a>
+			<pre><code>
+			int intNum = 0;
+			while(intNum &lt; 10)
+			{
+				intNum = intNum + 1;
+				intNum = intNum * 2;
+				Console.WriteLine("intNum = " + intNum);
+			}
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			intNum = 2
+			intNum = 6
+			intNum = 14			
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="array"><h3>How to declare/initialise an array</h3></a>
+			<p><b>Declaring Arrays</b></p>
+			<p>To declare an array in C#, use the following syntax</p>
+			<pre><code>
+			datatype[] arrayName;
+			</code></pre>
+			<p>where:</p>
+			<p>- <i>datatype</i> is used to specify the type of elements in the array</p>
+			<p>- <i>arrayName</i> specifies the name of the array</p>
+			<p>For example</p>
+			<pre><code>
+			double[] balance;
+			</code></pre>
+			
+			<p><b>Initialising Arrays</b></p>
+			<p>Declaring an array does not initialize the array in the memory. When the array variable is initialized, you can assign values to the array.</p>
+			<p>Array is a reference type, so you need to use the <i>new</i> keyword to create an instance of the array. For example,</p>
+			<pre><code>
+			double[] balance = new double[10];
+			</code></pre>
+			<br>
+				
+			
+			<a id="arrayvalues"><h3>Assigning Values to Array Elements</h3></a>
+			<p>You can assign values to individual array elements, by using the index number like -</p>
+			<pre><code>
+			double[] balance = new double[10];
+			balance[0] = 4500.0;
+			</code></pre>
+			<p>You can assign values to the array at the time of declaration, as shown −</p>
+			<pre><code>
+			double[] balance = { 2340.0, 4523.69, 3421.0};
+			</code></pre>
+			<p>You can also create and initialise an array, as shown -</p>
+			<pre><code>
+			int [] marks = new int[5]  { 99,  98, 92, 97, 95};
+			</code></pre>
+			<br>
+			
+			
+			<a id="arrayaccess"><h3>Accessing Array Elements</h3></a>
+			<p>An element is accessed by indexing the array name. This is done by placing the index of the element within square brackets after the name of the array. For example,</p>
+			<pre><code>
+			double salary = balance[9];
+			</code></pre>
+			<p>The following example, demonstrates the above-mentioned concepts of declaration, assignment, and accessing arrays −</p>
+			<pre><code>
+			int[] intExampleArray = new int[10]; // intExampleArray is an array of 10 integers
+
+            // initialize elements of array intExampleArray
+            for (int i = 0; i &lt; 10; i++)
+            {
+                intExampleArray[i] = i + 100;
+            }
+
+            // output each array element's value
+            for (int j = 0; j &lt; 10; j++)
+            {
+                Console.WriteLine("Element[{0}] = {1}", j, intExampleArray[j]);
+            }
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			Element[0] = 100
+			Element[1] = 101
+			Element[2] = 102
+			Element[3] = 103
+			Element[4] = 104
+			Element[5] = 105
+			Element[6] = 106
+			Element[7] = 107
+			Element[8] = 108
+			Element[9] = 109		
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="menuexample"><h3>An example console menu</h3></a>
+			<pre><code>
+			// We will use this boolean variable to control the menu
+			//while booMenu is true it will keep returning to the menu
+            bool booMenu = true;
+
+            while(booMenu == true)
+            {
+                // Display a menu
+                Console.WriteLine("1) Safely get an integer from the user\n2) Loop Example\nQ) Quit");
+                Console.Write("Type 1, 2 or Q: ");
+
+                // Get the input from the user
+                string strInput = Console.ReadLine();
+
+                // This if block is the menu
+                if(strInput.Equals("1"))
+                {
+                    ParseIntExample();
+                    Console.WriteLine("\n");
+                }
+                else if(strInput.Equals("2"))
+                {
+                    LoopExample(10);
+                    Console.WriteLine("\n");
+                }
+                else if(strInput.Equals("Q"))
+                {
+                    booMenu = false;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid option");
+                    Console.WriteLine("\n");
+                }
+            }
+			</code></pre>
+			<br>
+			
+			
+			<a id="consolechecknum"><h3>Simple number validation</h3></a>
+			<pre><code>
+			bool booNumCheck = true;
+            int intNum = -999; // error value
+            while (booNumCheck == true)
+            {
+				int intMin = 1; // minimum acceptable value
+				int intMax = 10; // maximum acceptable value
+                Console.Write("Enter a number between " + intMin + " and " + intMax + ": ");
+                
+                while (!int.TryParse(Console.ReadLine(), out intNum))
+                {
+                    Console.Write("The value must be an integer, try again: ");
+                }
+
+                if (intNum &gt;= intMin &amp;&amp; intNum &lt;= intMax)
+                {
+                    // number is between intMin and intMax inclusive
+                    booNumCheck = false;
+                }
+                else
+                {
+                    // number is invalid
+                    Console.WriteLine("Invalid input, must be between " + intMin + " and " + intMax);
+                }
+            }
+
+            Console.WriteLine("intNum is: " + intNum);
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			Enter a number between 1 and 10: <b>11</b>
+			Invalid input, must be between 1 and 10
+			Enter a number between 1 and 10: <b>2</b>
+			intNum is: 2
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="trycatchblock"><h3>Try/Catch Block</h3></a>
+			<pre><code>
+			try
+			{
+				// dangerous code here!
+			}
+			catch (Exception excpFile)
+			{
+				Console.WriteLine(excpFile.ToString());
+			}
+			</code></pre>
+			<br>
+			
+			<a id="datetostring"><h3>Date To String (Timestamps)</h3></a>
+			<pre><code>
+			DateTime dt = DateTime.Now;
+            string strOut = dt.ToString("G");
+            Console.WriteLine(strOut);
+			</code></pre>
+			<pre><code><b>
+			Output (depending on time of course):
+			
+			12/03/2019 9:43:22 AM
+			</b></code></pre>
+			<br>
+			
+			
+			<a id="filesetuppath"><h3>FILES: Setup filename</h3></a>
+			<pre><code>
+			string strFileName = AppDomain.CurrentDomain.BaseDirectory + "amazing.txt";
+			</code></pre>
+			<p>Substitute <i>"amazing.txt"</i> with the string of your choice. Remember to have a proper filename extension!</p>
+			<br>
+			
+			
+			<a id="filedelete"><h3>FILES: Delete</h3></a>
+			<pre><code>
+			using System.IO; // We need this if we are going to use files!
+			</code></pre>
+			<p>Remember you need to import System.IO !!! (above)</p>
+			<pre><code>
+			try
+			{
+				// Delete the file if it exists.
+				if (File.Exists(strFileName))
+				{
+					File.Delete(strFileName);
+				}
+			}
+			catch (Exception excpFile)
+			{
+				Console.WriteLine(excpFile.ToString());
+			}
+			
+			</code></pre>
+			<br>
+			
+			
+			<a id="filewrite"><h3>FILES: Write</h3></a>
+			<pre><code>
+			using System.IO; // We need this if we are going to use files!
+			</code></pre>
+			<p>Remember you need to import System.IO !!! (above)</p>
+			<pre><code>
+			try
+			{
+				// Create the actual file
+				using (StreamWriter fileStr = File.CreateText(strFileName))
+				{
+					string strLineOne = "This is super amazing";
+					// These 2 lines write out our strings to our file!
+					fileStr.WriteLine(strLineOne);
+				}
+			}
+			catch (Exception excpFile)
+			{
+				Console.WriteLine(excpFile.ToString());
+			}
+			</code></pre>
+			<br>
+			
+			
+			<a id="fileread"><h3>FILES: Read</h3></a>
+			<pre><code>
+			using System.IO; // We need this if we are going to use files!
+			</code></pre>
+			<p>Remember you need to import System.IO !!! (above)</p>
+			<pre><code>
+			try
+			{
+				// This block of code is how we read from a file
+				using (StreamReader srFileRead = File.OpenText(strFileNameA))
+				{
+					string strTemp = "";
+					while ((strTemp = srFileRead.ReadLine()) != null)
+					{
+						Console.WriteLine(strTemp);
+					}
+					// Make a new line to be neat
+					Console.WriteLine("");
+				}
+			}
+			catch (Exception excpFile)
+			{
+				Console.WriteLine(excpFile.ToString());
+			}
+			</code></pre>
+			<br>
+			
+			
+			<a id="fileappend"><h3>FILES: Append</h3></a>
+			<pre><code>
+			using System.IO; // We need this if we are going to use files!
+			</code></pre>
+			<p>Remember you need to import System.IO !!! (above)</p>
+			<pre><code>
+			try
+			{
+				if (!File.Exists(strFileName))
+				{
+					// If the file doesn't exist, we'll make a blank one
+					using (StreamWriter fileStr = File.CreateText(strFileName))
+					{
+						// Writing a blank text file
+						string strLineOne = "";
+						fileStr.WriteLine(strLineOne);
+					}
+				}
+				
+				// This block of code will append (add to) the file
+				using (StreamWriter swFile = File.AppendText(strFileName))
+				{
+					Console.WriteLine("Adding 3 lines!");
+					swFile.WriteLine("This");
+					swFile.WriteLine("is extra");
+					swFile.WriteLine("text");
+				}
+			}
+			catch(Exception excpFile)
+			{
+				Console.WriteLine(excpFile.ToString());
+			}
+			</code></pre>
+			<br>
+			
+			<a id="roundingdoubles"><h3>Math: Rounding</h3></a>
+			<pre><code>
+			// Math.Round() demonstration
+            double dblExample = 3.1415926535;
+
+            // how to round to the nearest whole number
+            double dblOutOne = Math.Round(dblExample);
+            Console.WriteLine(dblOutOne);
+
+            // How to round to x decimal places (in this case 3)
+            double dblOutTwo = Math.Round(dblExample, 3);
+            Console.WriteLine(dblOutTwo);
+			</code></pre>
+			<pre><code><b>
+			Output:
+			
+			3
+			3.142
+			</b></code></pre>
+			<br>
+			
+			<a id="randomnumbers"><h3>Math: Random Numbers</h3></a>
+			<pre><code>
+			// Generate random numbers between 1 and 6
+            Random randGen = new Random();
+            int intMin = 1;
+            int intMax = 7; // the maximum is an "exclusive maximum"
+            // Exclusive maximum means that it never occurs in output
+
+            // Generate some random numbers and display them
+            Console.WriteLine(randGen.Next(intMin, intMax));
+            Console.WriteLine(randGen.Next(intMin, intMax));
+            Console.WriteLine(randGen.Next(intMin, intMax));
+			</code></pre>
+			<br>
+			
+			<a id="guigetstring"><h3>GUI: Get a string from a textbox</h3></a>
+			<pre><code>
+			string strName = txtName.Text;
+			</code></pre>
+			<p>strName will be whatever the use has typed into txtName. For this exact code to work you need to have put in a textbox called txtName.</p>
+			<br>
+			
+			
+			<a id="guigetint"><h3>GUI: Get an integer from a textbox</h3></a>
+			<pre><code>
+			int intRetVal = -999;
+			bool booValid = int.TryParse(txtBaseHP.Text, out intRetVal);
+			// If this fails to convert properly, intRetVal will = 0 and booValid will = false
+			</code></pre>
+			<p>booValid will be true if the conversion was successful. Note that we use txtBaseHP, a textbox, you will need to change this to suit your code.</p>
+			<br>
+			
+			
+			<a id="guioutputstring"><h3>GUI: Output a string to a label</h3></a>
+			<pre><code>
+			lblOutput.Content = "Your name is " + strName;
+			</code></pre>
+			<p><b>Output on label: </b>Your name is Bob</p>
+			<br>
+			
+			
+			<a id="guiradiobuttons"><h3>GUI: Radio Buttons</h3></a>
+			<p>Make sure to set the "GroupName" in the properties. You can also set if one is checked by default with the "IsChecked" value.</p>
+			<p>This example is using a simple 2 Radiobutton setup for a Yes/No. We are outputting to a label called lblOutput.</p>
+			<pre><code>
+			if (rbYes.IsChecked == true)
+			{
+				lblOutput.Content = "Yes was selected";
+			}
+			else if (rbNo.IsChecked == true)
+			{
+				lblOutput.Content = "No was selected";
+			}
+			else
+			{
+				lblOutput.Content = "Something went very wrong";
+			}
+			</code></pre>
+			<p>The .IsChecked property is a boolean variable.</p>
+			<br>
+			
+			
+			<a id="guigetintvalid"><h3>GUI: Get and validate a number</h3></a>
+			<pre><code>
+            int intPokeLvl = -999;
+            bool booValid = int.TryParse(txtPokeLvl.Text, out intPokeLvl);
+
+            bool booNumInRange = true;
+			// With this logic, we accept the number (don't turn booNumInRange to false) if it is between 1-100 inclusive.
+            if(intPokeLvl &lt;= 0 || intPokeLvl &gt; 100)
+            {
+                booNumInRange = false;
+            }
+
+            if (booValid == false || booNumInRange == false)
+            {
+                lblLevelError.Content = "Must be an integer between 1-100";
+            }
+            else
+            {
+				// Your code goes here, if it gets to this part of the code, it has passed all of our validation
+            }​
+			</code></pre>
+			<p><b>Output if not a number or outside 1-100: </b>Must be an integer between 1-100</p>
+			<br>
+			
+			
+			<a id="guigetstrvalid"><h3>GUI: Get and validate a string</h3></a>
+			<pre><code>
+   			string strName = txtName.Text;
+			bool booValidName = true;
+			
+			// With this logic, we only accept if the user has put in something in the textbox
+			if (strName.Equals(""))
+			{
+				booValidName = false;
+			}
+			
+			if (booValidName == false)
+			{
+				lblNameError.Content = "Please enter a name";
+			}
+			else
+			{
+				// Your code goes here, if it gets to this part of the code, it has passed all of our validation
+			}
+			</code></pre>
+			<p><b>Output if nothing was entered in the textbox: </b>Please enter a name</p>
+			<br>
+			
+			<a id="intdoctemplates"><h3>Internal Documentation Templates</h3></a>
+			<pre><code>
+			Function Headers:
+			
+			/*
+			Function:
+			Argument(s): 
+			Author:
+			Contact: 
+			Last Edited: (date and time)
+			Purpose:
+			*/
+			</code></pre>
+			<pre><code>
+			Class Headers:
+			
+			/*
+			Class: 
+			Constructor(s):
+			Author:
+			Contact:
+			Last Edited: (date and time)
+			Purpose:
+			*/
+			</code></pre>
+			<br>
+		</div>
+  
+	
+</body></html>
