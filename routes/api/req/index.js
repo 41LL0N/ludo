@@ -19,7 +19,7 @@ route.post('/user-action/login', async(req, res) => {
             });
     
         } else {
-            return res.redirect('/home');
+            return res.redirect('/home?loggedIn=true');
         }
 });
 

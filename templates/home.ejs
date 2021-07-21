@@ -9,14 +9,20 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-    <div style="height: 15%;width: 100%;background-color: rgba(255, 208, 0, 0.521);font-family: 'Google Sans Medium', sans-serif;color: white;padding:5px 10px;">
-        <h5>Notice: This website is still in beta mode. Many features might not work as intended.</h5>
-    </div>
+    
     <div style="float:left;height:100%;">
         <%- include("components/navigation") %>
     </div>
     <div style="float: right;width:70%;margin-top: 50px;margin-left: 100px;">
         <h2 style="font-family: 'Product Sans Black', sans-serif;">Welcome back!</h2>
+        <br>
+        <div class="alert default" id="alert">
+            <h5 id="alert-text"></h5>
+        </div>
+        <br>
+        <div class="alert warning">
+            <h5>Notice: This website is still in beta mode. Many features might not work as intended.</h5>
+        </div>
         <br>
         <div class="banner new-site-promo">
             <h3>Introducing... the new and improved eSchool site!</h3>
@@ -25,6 +31,7 @@
         <br>
         <div class="banner apps-banner">
             <h6>Your Applications</h6>
+            <small>RECOMMENDED</small><br><br>
             <a class="app-icon webmail" style="margin-left: 20px;" href="https://webmail.milsen.vic.edu.au" target="popup" onclick="window.open('https://webmail.milsen.vic.edu.au','popup','width=1080,height=720'); return false;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Outlook_hi-res_icon_%282019%29.svg" width="70px">
             </a>
@@ -51,4 +58,14 @@
         </div>
     </div>
  </body>
+
+ <script>
+     const params = new URLSearchParams(window.location.search);
+     const loggedIn = params.get("loggedIn");
+
+     if(loggedIn === "true") {
+        document.getElementById("alert").style.visibility = "visible";
+        document.getElementById("alert-text").innerHTML = "You have successfully logged in.";
+     }
+ </script>
 </html>
